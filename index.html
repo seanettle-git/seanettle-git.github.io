@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6G39VJ60M3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6G39VJ60M3');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Account Engagement トラッキング検証ページ（track.us-4.com）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:FILL@0..1&icon_names=campaign,cancel,check_circle,cookie,hourglass_empty,info,lan,refresh,schedule&display=block" rel="stylesheet">
+<style>
+  :root {
+    --md-sys-color-primary: #3d5f90;
+    --md-sys-color-on-primary: #ffffff;
+    --md-sys-color-secondary-container: #d7e3f8;
+    --md-sys-color-on-secondary-container: #101c2b;
+    --md-sys-color-tertiary-container: #c8f0cf;
+    --md-sys-color-on-tertiary-container: #0b2913;
+    --md-sys-color-error-container: #ffdad6;
+    --md-sys-color-on-error-container: #410002;
+    --md-sys-color-surface: #fdfcff;
+    --md-sys-color-surface-container: #eceef4;
+    --md-sys-color-surface-variant: #dfe2eb;
+    --md-sys-color-on-surface: #1a1c20;
+    --md-sys-color-on-surface-variant: #43474e;
+    --md-sys-color-background: #f8f9ff;
+    --md-sys-color-outline: #73777f;
+    --md-sys-color-outline-variant: #c3c6cf;
+    --md-sys-color-shadow: rgba(0, 0, 0, 0.15);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --md-sys-color-primary: #a7c8ff;
+      --md-sys-color-on-primary: #02315f;
+      --md-sys-color-secondary-container: #3b4858;
+      --md-sys-color-on-secondary-container: #d7e3f8;
+      --md-sys-color-tertiary-container: #1f4d2a;
+      --md-sys-color-on-tertiary-container: #c8f0cf;
+      --md-sys-color-error-container: #93000a;
+      --md-sys-color-on-error-container: #ffdad6;
+      --md-sys-color-surface: #1d2024;
+      --md-sys-color-surface-container: #1d2024;
+      --md-sys-color-surface-variant: #43474e;
+      --md-sys-color-on-surface: #e2e2e9;
+      --md-sys-color-on-surface-variant: #c3c6cf;
+      --md-sys-color-background: #111318;
+      --md-sys-color-outline: #8d9199;
+      --md-sys-color-outline-variant: #43474e;
+      --md-sys-color-shadow: rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Noto Sans JP", sans-serif;
+    background: var(--md-sys-color-background);
+    color: var(--md-sys-color-on-surface);
+    line-height: 1.6;
+  }
+  .ms {
+    font-family: "Material Symbols Outlined";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+  }
+  .top-app-bar {
+    background: var(--md-sys-color-surface-container);
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    padding: 16px;
+  }
+  .top-app-bar h1 { margin: 0; font-size: 20px; font-weight: 500; }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 16px;
+    display: grid;
+    gap: 16px;
+  }
+  .card {
+    background: var(--md-sys-color-surface);
+    border-radius: 12px;
+    box-shadow: 0 1px 2px var(--md-sys-color-shadow), 0 1px 3px 1px var(--md-sys-color-shadow);
+    padding: 16px;
+  }
+  .card h2 {
+    margin: 0 0 12px;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .card h2 .ms { color: var(--md-sys-color-primary); }
+  dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 8px 16px; }
+  dt { color: var(--md-sys-color-on-surface-variant); font-size: 14px; }
+  dd { margin: 0; font-family: ui-monospace, Menlo, monospace; font-size: 14px; word-break: break-all; }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 8px;
+    border-radius: 8px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 13px;
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+  }
+  .chip .ms { font-size: 18px; }
+  .chip.ok { background: var(--md-sys-color-tertiary-container); color: var(--md-sys-color-on-tertiary-container); }
+  .chip.ng { background: var(--md-sys-color-error-container); color: var(--md-sys-color-on-error-container); }
+  .empty { color: var(--md-sys-color-outline); font-style: italic; }
+  .note { margin: 12px 0 0; font-size: 13px; color: var(--md-sys-color-on-surface-variant); }
+  .btn-outlined {
+    margin-top: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 20px;
+    border: 1px solid var(--md-sys-color-outline);
+    border-radius: 20px;
+    background: transparent;
+    color: var(--md-sys-color-primary);
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  :focus-visible {
+    outline: 2px solid var(--md-sys-color-primary);
+    outline-offset: 2px;
+  }
+  @media (max-width: 480px) {
+    dl { grid-template-columns: 1fr; gap: 2px; }
+    dd { margin-bottom: 8px; }
+  }
+</style>
+</head>
+<body>
+<header class="top-app-bar">
+  <h1>Account Engagement トラッキング検証ページ（track.us-4.com）</h1>
+</header>
+
+<main>
+  <section class="card" aria-labelledby="h-basic">
+    <h2 id="h-basic"><span class="ms" aria-hidden="true">schedule</span>動作確認</h2>
+    <dl>
+      <dt>現在時刻</dt><dd id="now">-</dd>
+      <dt>このブラウザでの訪問回数</dt><dd id="visits">-</dd>
+      <dt>ページURL</dt><dd id="page-url">-</dd>
+      <dt>iframe 内で表示</dt><dd id="in-iframe">-</dd>
+      <dt>Cookie 有効</dt><dd id="cookie-enabled">-</dd>
+    </dl>
+    <p class="note">訪問回数はこのブラウザの localStorage で数えています（シークレットウィンドウでは毎回 1 から）。</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-utm">
+    <h2 id="h-utm"><span class="ms" aria-hidden="true">campaign</span>UTM パラメータ</h2>
+    <dl>
+      <dt>utm_source</dt><dd id="utm_source">-</dd>
+      <dt>utm_medium</dt><dd id="utm_medium">-</dd>
+      <dt>utm_campaign</dt><dd id="utm_campaign">-</dd>
+    </dl>
+  </section>
+
+  <section class="card" aria-labelledby="h-track">
+    <h2 id="h-track"><span class="ms" aria-hidden="true">lan</span>トラッキング状況</h2>
+    <div role="status" aria-live="polite">
+      <dl>
+        <dt>pd.js 読み込み</dt><dd id="st-pdjs">-</dd>
+        <dt>analytics リクエスト</dt><dd id="st-analytics">-</dd>
+        <dt>visitor_id</dt><dd id="st-visitor-id">-</dd>
+        <dt>visitor_id_sign</dt><dd id="st-visitor-id-sign">-</dd>
+      </dl>
+    </div>
+    <p class="note">ブラウザの Resource Timing から go.us-4.com へのリクエスト URL を読み取って表示しています。正式な確認は開発者ツールの Network タブで行ってください。</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-cookie">
+    <h2 id="h-cookie"><span class="ms" aria-hidden="true">cookie</span>このページから見える関連 Cookie</h2>
+    <dl id="cookies"></dl>
+    <p class="note">名前が visitor_id / pi_ / lpv で始まる Cookie のみ表示します。HttpOnly や go.us-4.com 専用の Cookie はここには出ないため、Application タブでも確認してください。</p>
+    <button type="button" class="btn-outlined" id="btn-refresh">
+      <span class="ms" aria-hidden="true">refresh</span>再読み取り
+    </button>
+  </section>
+</main>
+
+<script>
+(function () {
+  var TRACKER_HOST = 'go.us-4.com';
+
+  function $(id) { return document.getElementById(id); }
+
+  function setText(id, value) {
+    var el = $(id);
+    if (value === null || value === undefined || value === '') {
+      el.innerHTML = '<span class="empty">（なし）</span>';
+    } else {
+      el.textContent = value;
+    }
+  }
+
+  function setChip(id, state, label) {
+    var icon = { ok: 'check_circle', ng: 'cancel', wait: 'hourglass_empty' }[state];
+    var el = $(id);
+    el.innerHTML = '';
+    var chip = document.createElement('span');
+    chip.className = 'chip' + (state === 'wait' ? '' : ' ' + state);
+    chip.innerHTML = '<span class="ms" aria-hidden="true">' + icon + '</span>';
+    chip.appendChild(document.createTextNode(label));
+    el.appendChild(chip);
+  }
+
+  // 動作確認
+  function tick() { $('now').textContent = new Date().toLocaleString('ja-JP'); }
+  tick();
+  setInterval(tick, 1000);
+
+  var visits = '（localStorage 使用不可）';
+  try {
+    var n = parseInt(localStorage.getItem('track_test_visits') || '0', 10) + 1;
+    localStorage.setItem('track_test_visits', String(n));
+    visits = n + ' 回目';
+  } catch (e) { /* プライベートモード等 */ }
+  $('visits').textContent = visits;
+  $('page-url').textContent = location.href;
+  $('in-iframe').textContent = window.self !== window.top ? 'はい（iframe 内）' : 'いいえ（トップレベル）';
+  $('cookie-enabled').textContent = navigator.cookieEnabled ? 'はい' : 'いいえ';
+
+  // UTM パラメータ
+  var params = new URLSearchParams(location.search);
+  ['utm_source', 'utm_medium', 'utm_campaign'].forEach(function (key) {
+    setText(key, params.get(key));
+  });
+
+  // トラッキング状況（Resource Timing から go.us-4.com へのリクエストを拾う）
+  var pdjsSeen = false;
+  var analyticsSeen = false;
+  setChip('st-pdjs', 'wait', '待機中（ページ読み込み完了後に取得）');
+  setChip('st-analytics', 'wait', '待機中');
+
+  function inspect(entry) {
+    var url;
+    try { url = new URL(entry.name); } catch (e) { return; }
+    if (url.hostname !== TRACKER_HOST) return;
+    if (url.pathname === '/pd.js') {
+      pdjsSeen = true;
+      setChip('st-pdjs', 'ok', '読み込み済み');
+    } else if (url.pathname.indexOf('/analytics') === 0) {
+      analyticsSeen = true;
+      setChip('st-analytics', 'ok', '送信済み');
+      var vid = url.searchParams.get('visitor_id');
+      var sign = url.searchParams.get('visitor_id_sign');
+      if (vid) setChip('st-visitor-id', 'ok', vid); else setChip('st-visitor-id', 'ng', '空');
+      if (sign) setChip('st-visitor-id-sign', 'ok', sign); else setChip('st-visitor-id-sign', 'ng', '空');
+    }
+  }
+
+  if ('PerformanceObserver' in window) {
+    try {
+      new PerformanceObserver(function (list) { list.getEntries().forEach(inspect); })
+        .observe({ type: 'resource', buffered: true });
+    } catch (e) {
+      performance.getEntriesByType('resource').forEach(inspect);
+    }
+  }
+
+  // 一定時間経っても見えなければ失敗表示（広告ブロッカー等を疑う）
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      if (!pdjsSeen) setChip('st-pdjs', 'ng', '未検出（ブロックされている可能性）');
+      if (!analyticsSeen) setChip('st-analytics', 'ng', '未検出');
+    }, 8000);
+  });
+
+  // 関連 Cookie
+  function readCookies() {
+    var dl = $('cookies');
+    dl.innerHTML = '';
+    var found = document.cookie.split(';')
+      .map(function (c) { return c.trim(); })
+      .filter(function (c) { return /^(visitor_id|pi_|lpv)/.test(c); });
+    if (found.length === 0) {
+      var dt = document.createElement('dt');
+      dt.textContent = '結果';
+      var dd = document.createElement('dd');
+      dd.innerHTML = '<span class="empty">（該当なし）</span>';
+      dl.appendChild(dt);
+      dl.appendChild(dd);
+      return;
+    }
+    found.forEach(function (c) {
+      var i = c.indexOf('=');
+      var dt = document.createElement('dt');
+      dt.textContent = c.slice(0, i);
+      var dd = document.createElement('dd');
+      dd.textContent = decodeURIComponent(c.slice(i + 1));
+      dl.appendChild(dt);
+      dl.appendChild(dd);
+    });
+  }
+  readCookies();
+  window.addEventListener('load', function () { setTimeout(readCookies, 3000); });
+  $('btn-refresh').addEventListener('click', readCookies);
+})();
+</script>
+
+<script type='text/javascript'>
+piAId = '1171011';
+piCId = '544440';
+piHostname = 'go.us-4.com';
+
+(function() {
+    function async_load(){
+        var s = document.createElement('script'); s.type = 'text/javascript';
+        s.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + piHostname + '/pd.js';
+        var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+    }
+    if(window.attachEvent) { window.attachEvent('onload', async_load); }
+    else { window.addEventListener('load', async_load, false); }
+})();
+</script>
+</body>
+</html>
